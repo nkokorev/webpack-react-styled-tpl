@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 
-import Lenta from '../assets/icons/Lenta.svg';
+import Search from '../assets/icons/Search.svg';
 
 export const App: FC = () => {
   const [num, setNum] = useState(0);
@@ -12,7 +12,7 @@ export const App: FC = () => {
 
   return (
     <div>
-      <Lenta />
+      <Search />
       <p>
         App theme:
         num:
