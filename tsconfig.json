@@ -1,0 +1,64 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    //    "noImplicitThis": false,
+    "noEmit": true,
+    "emitDeclarationOnly": true,
+    "strictNullChecks": true,
+    "isolatedModules": true,
+    "inlineSources": false, // Помещать ли source в итоговый файл рядом с source map?
+    "inlineSourceMap": true, // Помещать ли source map в итоговый файл, вместо того чтобы иметь отдельный файл с source map?
+    "noResolve": false, // Не добавлять "/// <reference path="..." />" в список скомпилированных файлов.
+    "declaration": false,
+    "declarationMap": false,
+    "diagnostics": true,
+    "listEmittedFiles": true,
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "react-jsx",
+    //    "outDir": "./dist/",
+    //    "declarationDir": "./dist",
+    "baseUrl": "./",
+    //    "rootDir": "./src",
+    "rootDir": "src",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/types"
+    ],
+    "sourceMap": false
+  },
+  "paths": {
+    "icon/*": ["./src/assets/icons/*"],
+    //    "config/*": ["./src/app/_config/*"],
+    //    "environment/*": ["./src/environments/*"],
+    //    "shared/*": ["./src/app/_shared/*"],
+    //    "helpers/*": ["./src/helpers/*"],
+    //    "tests/*": ["./src/tests/*"]
+  },
+  "include": [
+    "src/**/*",
+    "../../@types",
+    //    "src/types/**/*",
+    "src/assets/**/*"
+  ],
+  //  "files": ["src/**/*", "src/assets/icons/**/*"],
+  "exclude": ["node_modules", "babel.config.js"]
+  //  "exclude": ["node_modules", "babel.config.js",".eslintrc.js"]
+}
