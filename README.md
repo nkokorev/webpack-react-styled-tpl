@@ -10,4 +10,5 @@
 
 
 ### [!] Not complete
+- theme throw `ThemeProvider` styled-components
 
