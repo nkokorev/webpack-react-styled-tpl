@@ -24,7 +24,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '/dist'),
   },
   optimization: {
     moduleIds: 'named',
@@ -55,12 +55,6 @@ module.exports = {
       'process.env.API_HOST': JSON.stringify(process.env.API_HOST),
       'process.env.APPLICATION_VERSION': JSON.stringify(packageJson.version),
     }),
-    /* new webpack.EnvironmentPlugin({
-      'process.env.NODE_ENV': process.env.NODE_ENV,
-    }), */
-    /* new HtmlWebpackPlugin({
-            template: "src/index.html", // to import index.html file inside index.js
-        }), */
   ],
   devServer: {
     port: 3030, // you can change the port
@@ -73,7 +67,6 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            // presets: ['@babel/preset-env', '@babel/preset-typescript'],
             presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
           },
         },

@@ -1,7 +1,7 @@
-import { PREFER_DARK_QUERY, THEME_QUERY_PARAMETER } from 'src/common';
 import {
   dark, light, ThemeName, ThemeNameKey, ThemeType,
-} from 'src/theme/theme.config';
+} from './theme.config';
+import { PREFER_DARK_QUERY, THEME_QUERY_PARAMETER } from './theme.constants';
 
 export const preferMediaDarkQuery = window.matchMedia(PREFER_DARK_QUERY);
 export const isPreferThemeDark = () => window.matchMedia && window.matchMedia(PREFER_DARK_QUERY).matches;

@@ -1,8 +1,9 @@
 import React, {
   FC, PropsWithChildren, useEffect, useState,
 } from 'react';
-import { preferMediaDarkQuery, resolveInitTheme } from 'src/theme/theme.tools';
 import { ThemeProvider as ThemeProviderStyledComponents } from 'styled-components';
+
+import { preferMediaDarkQuery, resolveInitTheme } from './theme.tools';
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [currentTheme, setCurrentTheme] = useState(resolveInitTheme());
