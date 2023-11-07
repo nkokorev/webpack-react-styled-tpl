@@ -62,10 +62,6 @@ module.exports = {
           },
         },
       },
-      /*      {
-        test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      }, */
       {
         assert: { type: 'css' },
         rules: [
@@ -74,26 +70,6 @@ module.exports = {
             options: {
               exportType: 'css-style-sheet',
               // Other options
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              // Other options
-            },
-          },
-        ],
-      },
-      /* {
-        test: /\.((c|sa|sc)ss)$/i,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              // Run `postcss-loader` on each CSS `@import` and CSS modules/ICSS imports, do not forget that `sass-loader` compile non CSS `@import`'s into a single file
-              // If you need run `sass-loader` and `postcss-loader` on each CSS `@import` please set it to `2`
-              importLoaders: 1,
             },
           },
           {
@@ -111,12 +87,14 @@ module.exports = {
               },
             },
           },
-          // Can be `less-loader`
           {
             loader: 'sass-loader',
+            options: {
+              // Other options
+            },
           },
         ],
-      }, */
+      },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
@@ -147,33 +125,6 @@ module.exports = {
         ],
         type: 'javascript/auto',
       },
-      /* {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      }, */
-      /* {
-        test: /\.css$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [
-                  [
-                    'postcss-preset-env',
-                    {
-                      // Options
-                    },
-                  ],
-                ],
-              },
-            },
-          },
-        ],
-      }, */
-      // For webpack v5
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
