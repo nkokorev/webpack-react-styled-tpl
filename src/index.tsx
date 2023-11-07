@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { App } from './app';
+import { GlobalStyles } from './assets';
 import { Login } from './modules';
 import { ROUTES } from './router';
 import { ThemeProvider } from './theme';
@@ -19,5 +20,6 @@ root.render(
         </Route>
       </Routes>
     </BrowserRouter>
+    <GlobalStyles />
   </ThemeProvider>,
 );

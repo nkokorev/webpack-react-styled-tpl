@@ -1,1 +1,2 @@
-export { default as Search } from './Search.svg';
+export * from './styled';
+export * from './svg';

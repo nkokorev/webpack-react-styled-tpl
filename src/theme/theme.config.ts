@@ -16,6 +16,7 @@ export type ThemeNameKey = keyof Record<ThemeName, string>;
 
 export const light = {
   name: ThemeName.Light,
+  isDark: false,
   colors: {
     background: {
       primary: '#fff',
@@ -49,9 +50,11 @@ export const light = {
       // --light-background-solid-basic: #fff; -- input bkg
       inputBackground: '#fff',
     },
+    icons: {
+      a: '#2abbbb',
+      fill: '#222222',
 
-    // unused?
-    primary: '#fff',
+    },
   },
   gap: {
     sm: '8px',
@@ -83,6 +86,7 @@ export const light = {
 };
 export const dark: ThemeType = {
   name: ThemeName.Dark,
+  isDark: true,
   colors: {
     background: {
       primary: '#222',
@@ -116,9 +120,10 @@ export const dark: ThemeType = {
       // --light-background-solid-basic: #fff; -- input bkg
       inputBackground: '#fff',
     },
-
-    // unused?
-    primary: '#fff',
+    icons: {
+      a: '#af1616',
+      fill: '#E5E5E5',
+    },
   },
   gap: {
     sm: '8px',

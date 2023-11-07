@@ -34,7 +34,12 @@ module.exports = {
     'newline-before-return': 'warn',
     'react/jsx-uses-react': 'warn',
     'linebreak-style': [2, 'unix'],
-    'max-len': [2, { code: 250 }],
+    'max-len': [2, {
+      code: 250,
+      "ignorePattern": "<([\s\S]*?)/>",
+      "ignoreUrls": true,
+      "ignoreStrings": true
+    }],
     'jsx-a11y/label-has-associated-control': ['off'],
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
