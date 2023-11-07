@@ -63,28 +63,24 @@ module.exports = {
         },
       },
       {
+        test: /\.css$/,
+        // test: /\.s?css$/,
+        use: [
+          { loader: 'style-loader' }, // to inject the result into the DOM as a style block
+          { loader: 'css-loader', options: { modules: true, import: true } }, // to convert the resulting CSS to Javascript to be bundled (modules:true to rename CSS classes in output to cryptic identifiers, except if wrapped in a :global(...) pseudo class)
+        ],
+      },
+      /* {
         assert: { type: 'css' },
         rules: [
           {
             loader: 'css-loader',
             options: {
               exportType: 'css-style-sheet',
-              // Other options
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [
-                  [
-                    'postcss-preset-env',
-                    {
-                      // Options
-                    },
-                  ],
-                ],
-              },
+              importLoaders: 1,
+              module: global,
+              modules: true,
+              import: true,
             },
           },
           {
@@ -94,7 +90,7 @@ module.exports = {
             },
           },
         ],
-      },
+      }, */
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
@@ -139,6 +135,6 @@ module.exports = {
     alias: {
       src: SOURCE_DIR,
     },
-    extensions: ['.tsx', '.ts', '.js', '.json'],
+    extensions: ['.tsx', '.ts', '.js', '.json', 'css', 'scss'],
   },
 };

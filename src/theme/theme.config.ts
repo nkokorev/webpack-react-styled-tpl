@@ -23,6 +23,7 @@ export const light = {
       secondary: '#e7e7e7',
       // --background-blur-alert
       blurAlert: 'rgba(34, 34, 34, 0.90)',
+      aside: '#bbbbbb',
     },
     text: {
       primary: '#222',
@@ -93,6 +94,7 @@ export const dark: ThemeType = {
       secondary: '#e7e7e7',
       // --background-blur-alert
       blurAlert: 'rgba(34, 34, 34, 0.90)',
+      aside: '#232323',
     },
     text: {
       primary: '#222',
