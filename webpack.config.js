@@ -63,34 +63,17 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        // test: /\.s?css$/,
+        test: /\.module.css$/,
         use: [
-          { loader: 'style-loader' }, // to inject the result into the DOM as a style block
-          { loader: 'css-loader', options: { modules: true, import: true } }, // to convert the resulting CSS to Javascript to be bundled (modules:true to rename CSS classes in output to cryptic identifiers, except if wrapped in a :global(...) pseudo class)
-        ],
-      },
-      /* {
-        assert: { type: 'css' },
-        rules: [
+          { loader: 'style-loader' },
           {
             loader: 'css-loader',
             options: {
-              exportType: 'css-style-sheet',
-              importLoaders: 1,
-              module: global,
               modules: true,
-              import: true,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              // Other options
             },
           },
         ],
-      }, */
+      },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
