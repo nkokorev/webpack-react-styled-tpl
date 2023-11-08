@@ -36,7 +36,6 @@ module.exports = {
     'linebreak-style': [2, 'unix'],
     'max-len': [2, {
       code: 250,
-      "ignorePattern": "<([\s\S]*?)/>",
       "ignoreUrls": true,
       "ignoreStrings": true
     }],
