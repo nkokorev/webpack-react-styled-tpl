@@ -19,7 +19,6 @@
     "strict": true,
     "alwaysStrict": true,
     "noImplicitAny": true,
-    //    "noImplicitThis": false,
     "noEmit": true,
     "emitDeclarationOnly": true,
     "strictNullChecks": true,
@@ -33,32 +32,13 @@
     "listEmittedFiles": true,
     "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx",
-    //    "outDir": "./dist/",
-    //    "declarationDir": "./dist",
     "baseUrl": "./",
-    //    "rootDir": "./src",
     "rootDir": "src",
-    "typeRoots": [
-      "node_modules/@types",
-      "src/types"
-    ],
     "sourceMap": false
-  },
-  "paths": {
-    "icon/*": ["./src/assets/icons/*"],
-    //    "config/*": ["./src/app/_config/*"],
-    //    "environment/*": ["./src/environments/*"],
-    //    "shared/*": ["./src/app/_shared/*"],
-    //    "helpers/*": ["./src/helpers/*"],
-    //    "tests/*": ["./src/tests/*"]
   },
   "include": [
     "src/**/*",
     "../../@types",
-    //    "src/types/**/*",
-    "src/assets/**/*"
   ],
-  //  "files": ["src/**/*", "src/assets/icons/**/*"],
   "exclude": ["node_modules", "babel.config.js"]
-  //  "exclude": ["node_modules", "babel.config.js",".eslintrc.js"]
 }
